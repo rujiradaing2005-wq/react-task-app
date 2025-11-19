@@ -1,0 +1,21 @@
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ShowAllTask from './screens/ShowAllTask'
+import AddTask from './screens/AddTask'
+import UpdateTask from './screens/UpdateTask'
+import Home from './screens/Home'
+
+export default function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/showalltask" element={<ShowAllTask/>} />
+          <Route path="/addtask" element={<AddTask/>} />
+          <Route path="/updatetask/:id" element={<UpdateTask/>} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
+}
